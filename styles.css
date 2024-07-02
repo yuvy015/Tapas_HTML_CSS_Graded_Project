@@ -69,7 +69,7 @@ header {
 /* Slideshow styling */
 .slideshow-container {
   max-width: 100%;
-  height: 200px;
+  height: auto;
   position: relative;
   margin-top: 102px; /* Adjust as needed based on header and menu height */
   border: 2px solid steelblue;
