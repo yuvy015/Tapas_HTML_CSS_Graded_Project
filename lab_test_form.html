@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Test Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional CSS styles for consistency */
+    .lab-test-form input[type="submit"],
+    .lab-test-form input[type="reset"],
+    .lab-test-form button[type="button"] {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .lab-test-form input[type="submit"]:hover,
+    .lab-test-form input[type="reset"]:hover,
+    .lab-test-form button[type="button"]:hover {
+      background-color: #45a049;
+    }
+
+    .lab-test-form input[type="submit"]:focus,
+    .lab-test-form input[type="reset"]:focus,
+    .lab-test-form button[type="button"]:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lab Test Form Header -->
+  <header class="lab-test-header">
+    <h1>Lab Test Form</h1>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="lab-test-container">
+    
+    <!-- Lab Test Form -->
+    <form id="labTestForm" class="lab-test-form" method="POST" onsubmit="return showFakeSuccess()">
+      
+      <!-- Patient Contact Details -->
+      <h2>Patient Contact Details</h2>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required><br><br>
+
+      <label for="patientId">Patient ID:</label>
+      <input type="text" id="patientId" name="patientId"><br><br>
+
+      <label for="contactNumber">Contact Number:</label>
+      <input type="tel" id="contactNumber" name="contactNumber" required><br><br>
+
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <!-- Address -->
+      <h2>Address</h2>
+      <label for="houseNumber">House Number:</label>
+      <input type="text" id="houseNumber" name="houseNumber"><br><br>
+
+      <label for="street">Street:</label>
+      <input type="text" id="street" name="street"><br><br>
+
+      <label for="area">Area:</label>
+      <input type="text" id="area" name="area"><br><br>
+
+      <label for="district">District:</label>
+      <select id="district" name="district" required>
+        <option value="">Choose</option>
+        <option value="District 1">District 1</option>
+        <option value="District 2">District 2</option>
+        <option value="District 3">District 3</option>
+      </select><br><br>
+
+      <!-- Choose Test Type -->
+      <h2>Choose Test Type</h2>
+      <label><input type="checkbox" name="testType[]" value="CBC"> CBC</label><br>
+      <label><input type="checkbox" name="testType[]" value="Complete Urine"> Complete Urine</label><br>
+      <label><input type="checkbox" name="testType[]" value="Lipid Profile"> Lipid Profile</label><br>
+      <label><input type="checkbox" name="testType[]" value="Thyroid Stimulating Hormone (TSH)"> Thyroid Stimulating Hormone (TSH)</label><br>
+      <label><input type="checkbox" name="testType[]" value="Glucose Test"> Glucose Test</label><br><br>
+      <p id="testTypeMessage"></p>
+
+      <!-- Hard Copy of Report -->
+      <h2>Do you want a hard copy of the report also?</h2>
+      <label><input type="radio" name="hardCopy" value="Yes"> Yes</label><br>
+      <label><input type="radio" name="hardCopy" value="No"> No</label><br><br>
+
+      <!-- Select Date and Time -->
+      <h2>Select Your Comfortable Date and Time</h2>
+      <label for="testDate">Date:</label>
+      <input type="date" id="testDate" name="testDate" required><br><br>
+
+      <label for="testTime">Time:</label>
+      <input type="time" id="testTime" name="testTime" required><br><br>
+
+      <!-- Reset and Submit buttons -->
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+      
+      <!-- Back to Main Page button -->
+      <button type="button" onclick="window.location.href='index.html';">Back to Main Page</button>
+
+    </form>
+
+    <!-- Right Side Fixed Image -->
+    <div class="fixed-image">
+      <img src="image/lab_test.jpg" alt="Lab Test Image">
+    </div>
+  
+  </div>
+  
+  <!-- Success Message Container (hidden by default) -->
+  <div id="successMessage" style="display: none;">
+    <h2>Form Submitted Successfully!</h2>
+    <p>This is a fake success message.</p>
+    <button onclick="goBack()" style="margin-top: 10px;">Back to Form</button>
+  </div>
+
+  <!-- JavaScript to show fake success message -->
+  <script>
+    function showFakeSuccess() {
+      // Hide the form
+      document.getElementById('labTestForm').style.display = 'none';
+      // Show the success message
+      document.getElementById('successMessage').style.display = 'block';
+      // Prevent actual form submission
+      return false;
+    }
+
+    function goBack() {
+      // Show the form
+      document.getElementById('labTestForm').style.display = 'block';
+      // Hide the success message
+      document.getElementById('successMessage').style.display = 'none';
+    }
+  </script>
+
+  <!-- JavaScript for form validation (if needed) -->
+  <script src="script.js"></script>
+
+</body>
+</html>

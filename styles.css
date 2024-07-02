@@ -1,0 +1,227 @@
+/* Corrected CSS to ensure dropdowns are hidden by default */
+
+.menu-items {
+  list-style-type: none;
+  font-size: 20px;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+}
+
+#main-menu {
+  background-color: gray; /* Ensure background color is applied */
+  padding: 1px 0;
+  position: fixed;
+  width: 100%;
+  top: 60px; /* Adjust as per your header height */
+  z-index: 999; /* Ensure navigation is above other content */
+}
+
+#main-menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+#main-menu > li > a {
+  display: inline-block;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+#main-menu > li > a:hover {
+  background-color: black;
+}
+
+.dropdown-content {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  background-color: lightgrey;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  padding: 8px 16px;
+}
+
+#main-menu-item-2:hover .dropdown-content,
+#main-menu-item-3:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+header {
+  background-color: #333;
+  font-size: 15px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  padding: 0.1px;
+  margin bottom: 20px;
+  top:0;
+  z-index: 900; /* Ensure header is above other content */
+}
+/* Slideshow styling */
+.slideshow-container {
+  max-width: 100%;
+  height: 200px;
+  position: relative;
+  margin-top: 102px; /* Adjust as needed based on header and menu height */
+  border: 2px solid steelblue;
+  margin-bottom: 10px;
+}
+.product-section {
+    padding: 0.1px;
+    margin-top: 450px;
+	margin-bottom: 50px;
+}
+
+.products-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product-card {
+    display: inline-block;
+	width: 200px; 
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100px;
+    height: 100px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  margin-bottom: 8px;
+}
+
+.product-card button.add-to-cart {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card button.add-to-cart:hover {
+  background-color: rgb(250, 234, 230);
+  border-color: rgb(0, 255, 76);
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  width: 100%;
+  position: fixed;
+  clear: both; /* Ensures footer clears floated content */
+  z-index: 1000; /* Ensure footer is above other content */
+  bottom: 0;
+}
+
+
+
+/* Lab Test Form page specific header styling */
+.lab-test-header {
+  font-size: 15px; /* Adjust font size for lab test form header */
+  padding: 15px 0; /* Adjust padding for lab test form header */
+}
+
+/* Lab Test Form styling */
+
+/* Form container */
+.lab-test-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 160px; /* Adjust as needed */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Form styling */
+.lab-test-form {
+  width: 60%;
+}
+
+.lab-test-form h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.lab-test-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.lab-test-form input[type="text"],
+.lab-test-form input[type="tel"],
+.lab-test-form input[type="email"],
+.lab-test-form input[type="date"],
+.lab-test-form input[type="time"],
+.lab-test-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.lab-test-form input[type="reset"],
+.lab-test-form input[type="submit"] {
+  background-color:#C8A2C8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.lab-test-form input[type="reset"]:hover,
+.lab-test-form input[type="submit"]:hover {
+  background-color: #b185b1;
+}
+
+/* Right side fixed image */
+.fixed-image {
+  width: 30%;
+  position: fixed;
+  top: 160px; /* Adjust as needed */
+  right: 10%;
+}
+
+.fixed-image img {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+

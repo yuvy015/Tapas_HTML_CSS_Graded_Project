@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pharmacy</h1>
+  </header>
+
+
+  <nav>
+    <ul id="main-menu" class="menu-items">
+      <li>
+        <a href="#">Home</a>
+      </li>
+
+      <li class="dropdown" id="main-menu-item-2">
+        <a href="#">Our Medicines &#9660;</a>
+        <!-- Dropdown Content -->
+        <ul class="dropdown-content" id="sub-menu">
+          <li><span>Fever</span></li>
+          <li><span>Muscle Pains</span></li>
+          <li><span>Cold & Cough</span></li>
+        </ul>
+      </li>
+
+      <li class="dropdown" id="main-menu-item-3">
+        <a href="#">Health Care &#9660;</a>
+        <!-- Dropdown Content -->
+        <ul class="dropdown-content" id="sub-menu-2">
+          <li><span>Baby Care</span></li>
+          <li><span>Skin Care</span></li>
+          <li><span>Home Care</span></li>
+          <li><span>Personal Care</span></li>
+          <li><span>Pet Care</span></li>
+        </ul>
+      </li>
+
+      <li>
+        <li><a href="lab_test_form.html">Lab Test</a></li>
+        <!-- No dropdown content needed for Lab Test -->
+      </li>
+    </ul>
+  </nav>
+   <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="image/ani1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image/ani2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image/ani3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image/ani4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image/ani5.jpg" style="width:100%">
+    </div>
+  </div>
+   </div>
+
+  <section class="product-section" id="covid-care">
+    <h2>Covid Care Products</h2>
+    <div class="products-container">
+      <!-- Product Cards for Covid Care -->
+      <div class="product-card">
+        <img src="image/c1.jpg" alt="Product 1">
+            <h3>Coviself</h3>
+            <p>Price: $10.00</p>
+            <p>Price after Offer: $8.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	  <div class="product-card">
+        <img src="image/c2.jpg" alt="Product 1">
+           <h3>Covid Kit</h3>
+            <p>Price: $50.00</p>
+            <p>Price after Offer: $30.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	  <div class="product-card">
+        <img src="image/c3.jpg" alt="Product 1">
+             <h3>Sanitizer</h3>
+            <p>Price: $15.00</p>
+            <p>Price after Offer: $12.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	  <div class="product-card">
+        <img src="image/c4.jpg" alt="Product 1">
+              <h3>Mask</h3>
+            <p>Price: $5.00</p>
+            <p>Price after Offer: $2.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- Repeat for other products c2.jpg to c4.jpg -->
+    </div>
+  </section>
+
+  <section class="product-section" id="diabetes-care">
+    <h2>Diabetes Care Products</h2>
+    <div class="products-container">
+      <!-- Product Cards for Diabetes Care -->
+      <div class="product-card">
+        <img src="image/d1.jpg" alt="Product 1">
+            <h3>BGR-34</h3>
+            <p>Price: $20.00</p>
+            <p>Price after Offer: $16.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	        <div class="product-card">
+        <img src="image/d2.jpg" alt="Product 1">
+            <h3>Chawanprash Sugarfree</h3>
+            <p>Price: $20.00</p>
+            <p>Price after Offer: $18.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	        <div class="product-card">
+        <img src="image/d3.jpg" alt="Product 1">
+       <h3>Toothpaste Sugarfree</h3>
+            <p>Price: $10.00</p>
+            <p>Price after Offer: $8.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+	        <div class="product-card">
+        <img src="image/d4.png" alt="Product 1">
+            <h3>Fiber Cookies</h3>
+            <p>Price: $2.00</p>
+            <p>Price after Offer: $1.80</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="slideshow.js"></script>
+
+  <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; @copyright. Only for demonstration purposes</p>
+  </footer>
+</body>
+</html>
